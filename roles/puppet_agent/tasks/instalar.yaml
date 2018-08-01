@@ -1,0 +1,16 @@
+- name: baixar pacote puppet 
+  get_url:
+    url: https://apt.puppetlabs.com/puppet5-release-xenial.deb
+    dest: /tmp/puppet5.deb
+    mode: 0777
+- name: configura o repositorio
+  apt:
+    deb: /tmp/puppet5.deb
+- name: Run the equivalent of "apt-get update" as a separate step
+  apt:
+    update_cache: yes
+- name: instala o puppet agent
+  apt:
+   name: puppet-agent
+   state: present
+   

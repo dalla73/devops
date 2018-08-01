@@ -1,0 +1,9 @@
+---
+- name: Copiar arquivo
+  hosts: all
+  tasks:
+    - name: Copiando o arquivo resolv.conf
+      copy:
+        src: /etc/resolv.conf
+        dest: /etc/resolv.conf
+

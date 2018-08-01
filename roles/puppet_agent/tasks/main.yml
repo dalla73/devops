@@ -1,0 +1,4 @@
+---
+- name: chamando a playbook instalando
+  include: instalar.yaml
+

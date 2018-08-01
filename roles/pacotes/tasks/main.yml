@@ -1,0 +1,5 @@
+---
+# tasks file for pacotes
+
+- name: chamando a playbook prerequisitos
+  include: prerequisitos.yaml

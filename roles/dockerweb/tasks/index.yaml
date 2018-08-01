@@ -1,0 +1,13 @@
+- name: criando o arquivo index.html
+  file:
+    path: /var/lib/docker/volumes/index/_data/index.html
+    state: touch
+
+
+
+- name: adicionar conteudo dentro do arquivo index.html
+  blockinfile:
+    path: /var/lib/docker/volumes/index/_data/index.html
+    block: |
+      Arquivo de teste do index
+

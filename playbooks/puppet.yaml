@@ -1,0 +1,5 @@
+---
+- name: chamando a role web
+  hosts: devops 
+  roles:
+    - puppet

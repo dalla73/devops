@@ -1,0 +1,5 @@
+---
+- name: chamando a role pacotes
+  hosts: docker
+  roles:
+    - docker 

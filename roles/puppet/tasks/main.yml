@@ -1,0 +1,6 @@
+---
+- name: chamando a playbook instalando
+  include: instalar.yaml
+
+- name: iniciando o servidor puppet
+  include: iniciar_puppet_server.yaml

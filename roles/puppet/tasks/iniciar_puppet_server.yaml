@@ -1,0 +1,5 @@
+---
+- name: iniciar o servidor puppet
+  service:
+    name: puppetserver
+    state: started

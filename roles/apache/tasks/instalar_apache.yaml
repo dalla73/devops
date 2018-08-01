@@ -1,0 +1,14 @@
+- name: instalando o apache2 no debian
+  vars: 
+    - pacote_debian: apache2
+  package:
+      name: "{{ pacote_debian }}"
+      state: present
+  when: ansible_os_family == "Debian"
+- name: instalando o apache2 no centos
+  vars: 
+    - pacote_centos: httpd
+  package:
+      name: "{{ pacote_centos }}"
+      state: present
+  when: ansible_os_family == "RedHat"

@@ -1,0 +1,12 @@
+---
+- name: instalando pacotes prereqs
+  apt:
+    name: "{{item}}"
+    state: present
+    update_cache: yes
+  with_items:
+   - apt-transport-https
+   - ca-certificates
+   - curl 
+   - software-properties-common
+
